@@ -1,5 +1,5 @@
 # Deploy details
-On CloudFlare Pages currently: [astro-test](https://astro-test.samgreening.com/)
+On [CloudFlare](https://dash.cloudflare.com/) Pages currently: [astro-test](https://astro-test.samgreening.com/)
 
 # Welcome to [Astro](https://astro.build)
 
