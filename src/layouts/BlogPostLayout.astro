@@ -5,20 +5,10 @@ const { content } = Astro.props;
 <html lang="en">
   <head>
     <title>{content.title}</title>
-    <style>
-      :global(img) {
-        width: 200px;
-        height: auto;
-      }
-      article {
-        margin: 0 auto;
-        max-width: 860px;
-      }
-    </style>
   </head>
 
   <body>
-    <article>
+    <article class="prose">
       <slot />
     </article>
   </body>

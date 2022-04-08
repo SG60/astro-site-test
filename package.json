@@ -12,6 +12,7 @@
     "@astrojs/svelte": "^0.0.2",
     "@astrojs/tailwind": "^0.1.0",
     "@astrojs/turbolinks": "^0.0.2",
+    "@tailwindcss/typography": "^0.5.2",
     "astro": "^1.0.0-beta.5",
     "prettier-plugin-astro": "^0.0.12",
     "svelte": "^3.46.4"
