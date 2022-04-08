@@ -1,6 +1,6 @@
 ---
 title: Example 2
-layout: ../../layouts/BlogPostLayout.astro
+layout: "@layouts/BlogPostLayout.astro"
 description: This is an example blog post
 date: 2020-07-31
 author: "Jaydan Urwin"

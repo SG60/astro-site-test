@@ -1,6 +1,6 @@
 ---
 // Component imports and setup JavaScript go here!
-import BaseLayout from '../../layouts/BaseLayout.astro'
+import BaseLayout from '@layouts/BaseLayout.astro'
 
 export async function getStaticPaths({paginate}) {
   const allPosts = await Astro.glob('./*.md');
