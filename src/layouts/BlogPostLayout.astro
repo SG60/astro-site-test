@@ -1,15 +1,14 @@
 ---
+import BaseLayout from "@layouts/BaseLayout.astro";
 const { content } = Astro.props;
 ---
 
-<html lang="en">
-  <head>
-    <title>{content.title}</title>
-  </head>
-
-  <body>
-    <article class="prose">
-      <slot />
-    </article>
-  </body>
-</html>
+<BaseLayout title={content.title}>
+  <div class="mb-2 text-center">
+    <h1 class="text-2xl">{content.title}</h1>
+    <p class="italic">{content.description}</p>
+  </div>
+  <article class="prose mx-auto">
+    <slot />
+  </article>
+</BaseLayout>
