@@ -1,6 +1,7 @@
 ---
 import { Markdown } from "astro/components";
 import BaseLayout from "@layouts/BaseLayout.astro";
+import Article from "@components/Article.astro";
 const { title, description } = {
   title: "About",
   description: "About Astro",
@@ -8,15 +9,11 @@ const { title, description } = {
 ---
 
 <BaseLayout {title} {description}>
-  <div class="mb-2 text-center">
-    <h1 class="text-2xl">{title}</h1>
-    <p class="italic">{description}</p>
-  </div>
-  <article class="prose-slate dark:prose-invert mx-auto">
+  <Article {title} {description}>
     <Markdown>
       About me?! the site?! lot os stuff?!
 
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa aliquid modi fugit ad earum dicta, ipsa incidunt assumenda ab, sunt accusamus at sequi velit asperiores aliquam. Ea consectetur ex aut.
     </Markdown>
-  </article>
+  </Article>
 </BaseLayout>
