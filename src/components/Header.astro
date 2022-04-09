@@ -1,10 +1,6 @@
 ---
 const links = [
   {
-    label: 'Home',
-    url: '/',
-  },
-  {
     label: 'About',
     url: '/about',
   },
@@ -21,7 +17,7 @@ const links = [
     <a href="/">Home</a>
     <ul class="ml-auto">
         {links.map(link => (
-          <li class="inline">
+          <li class="inline-block ml-3">
             <a href={link.url}>{link.label}</a>
           </li>
         ))}
