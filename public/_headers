@@ -1,4 +1,2 @@
 /*
-    Content-Security-Policy: script-src 'sha256-asdfadf' 'strict-dynamic';
-        object-src 'none';
-        base-uri 'none';
+    Content-Security-Policy: script-src 'sha256-asdfadf' 'strict-dynamic'; object-src 'none'; base-uri 'none';
