@@ -1,0 +1,5 @@
+/*
+  Content-Security-Policy:
+    script-src 'sha256-{HASHED_INLINE_SCRIPT}' 'strict-dynamic';
+    object-src 'none';
+    base-uri 'none';
