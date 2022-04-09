@@ -9,15 +9,16 @@ export async function getStaticPaths({paginate}) {
 }
 
 const title = "Blog"
+const description = "Blog"
 const {page} = Astro.props;
 ---
 
-<BaseLayout title={title}>
+<BaseLayout {title} {description}>
   <div>
-    <h1>{title}</h1>
+    <h1 class="text-4xl">{title}</h1>
     <ul>
     {page.data.map((post) => (
-      <li><a href={post.url}>{post.frontmatter.title}</a></li>
+      <li class="my-2"><a href={post.url}>{post.frontmatter.title}</a></li>
     ))}
     </ul>
   </div>

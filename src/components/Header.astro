@@ -1,10 +1,6 @@
 ---
 const links = [
   {
-    label: 'Home',
-    url: '/',
-  },
-  {
     label: 'About',
     url: '/about',
   },
@@ -13,18 +9,36 @@ const links = [
     url: '/blog',
   },
 ];
+
+const currentPage = Astro.canonicalURL.pathname.slice(0,-1);
 ---
 <header
-  class="mb-4 py-2 grid grid-cols-[minmax(1.2rem,_1fr)_minmax(auto,65ch)_minmax(1.2rem,1fr)] bg-slate-100 "
+  class="mb-4 py-2 grid grid-cols-[minmax(1.2rem,_1fr)_minmax(auto,65ch)_minmax(1.2rem,1fr)] bg-slate-100 text-slate-900"
 >
   <nav class="col-start-2 flex flex-row">
-    <a href="/">Home</a>
+    <div>
+    <a href="/" aria-current={currentPage === "" ? "page":"false"}>Home</a>
+    </div>
     <ul class="ml-auto">
         {links.map(link => (
-          <li class="inline">
-            <a href={link.url}>{link.label}</a>
+          <li class="inline-block ml-3">
+            <a href={link.url} aria-current={currentPage === link.url ? "page" : "false"}>
+            {link.label}
+            </a>
           </li>
         ))}
     </ul>
   </nav>
 </header>
+
+<style>
+a[aria-current="page"] {
+  @apply border-b-2 border-slate-500
+}
+a:hover {
+  @apply bg-yellow-100
+}
+a {
+  @apply p-1
+}
+</style>

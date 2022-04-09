@@ -1,0 +1,13 @@
+---
+const { title, description } = Astro.props;
+---
+
+<article>
+  <div class="mb-2 text-center">
+    <h1 class="text-2xl">{title}</h1>
+    <p class="italic">{description}</p>
+  </div>
+  <div class="prose dark:prose-invert mx-auto">
+    <slot />
+  </div>
+</article>

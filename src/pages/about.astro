@@ -1,0 +1,19 @@
+---
+import { Markdown } from "astro/components";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Article from "@components/Article.astro";
+const { title, description } = {
+  title: "About",
+  description: "About Astro",
+};
+---
+
+<BaseLayout {title} {description}>
+  <Article {title} {description}>
+    <Markdown>
+      About me?! the site?! lot os stuff?!
+
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa aliquid modi fugit ad earum dicta, ipsa incidunt assumenda ab, sunt accusamus at sequi velit asperiores aliquam. Ea consectetur ex aut.
+    </Markdown>
+  </Article>
+</BaseLayout>

@@ -1,15 +1,12 @@
 ---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Article from "@components/Article.astro";
 const { content } = Astro.props;
+const { title, description } = content;
 ---
 
-<html lang="en">
-  <head>
-    <title>{content.title}</title>
-  </head>
-
-  <body>
-    <article class="prose">
-      <slot />
-    </article>
-  </body>
-</html>
+<BaseLayout {title} {description}>
+  <Article {title} {description}>
+    <slot />
+  </Article>
+</BaseLayout>
