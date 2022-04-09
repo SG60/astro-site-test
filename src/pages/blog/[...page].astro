@@ -9,10 +9,11 @@ export async function getStaticPaths({paginate}) {
 }
 
 const title = "Blog"
+const description = "Blog"
 const {page} = Astro.props;
 ---
 
-<BaseLayout title={title}>
+<BaseLayout {title} {description}>
   <div>
     <h1 class="text-4xl">{title}</h1>
     <ul>
