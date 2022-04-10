@@ -19,10 +19,10 @@ module.exports = {
           },
         },
       }),
-      colors: ({ colors }) => ({
+      colors: {
         text: withOpacityValue("--color-text"),
         background: withOpacityValue("--color-background"),
-      }),
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],
