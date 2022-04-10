@@ -13,9 +13,7 @@ const { title, description } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <slot name="head" />
   </head>
-  <body
-    class="text-[color:var(--color-text)] bg-[color:var(--color-background)]"
-  >
+  <body class="text-text bg-background">
     <Header />
     <main class="py-8 px-4 grid justify-center">
       <slot />
