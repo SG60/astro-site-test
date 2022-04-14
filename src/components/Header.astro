@@ -1,4 +1,6 @@
 ---
+import ThemeSwitchButton from "@components/ThemeSwitchButton.astro"
+
 const links = [
   {
     label: 'About',
@@ -13,11 +15,11 @@ const links = [
 const currentPage = Astro.canonicalURL.pathname.slice(0,-1);
 ---
 <header
-  class="mb-4 py-2 grid grid-cols-[minmax(1.2rem,_1fr)_minmax(auto,65ch)_minmax(1.2rem,1fr)] bg-slate-100 text-slate-900"
+  class="mb-4 py-2 grid grid-cols-[minmax(1.2rem,_1fr)_minmax(auto,65ch)_minmax(1.2rem,1fr)] bg-slate-100 dark:bg-slate-600 text-text"
 >
-  <nav class="col-start-2 flex flex-row">
+  <nav class="my-auto col-start-2 flex flex-row items-center">
     <div>
-    <a href="/" aria-current={currentPage === "" ? "page":"false"}>Home</a>
+      <a href="/" aria-current={currentPage === "" ? "page":"false"}>Home</a>
     </div>
     <ul class="ml-auto">
         {links.map(link => (
@@ -28,6 +30,9 @@ const currentPage = Astro.canonicalURL.pathname.slice(0,-1);
           </li>
         ))}
     </ul>
+    <div class="ml-3 flex">
+      <ThemeSwitchButton/>
+    </div>
   </nav>
 </header>
 
@@ -37,6 +42,9 @@ a[aria-current="page"] {
 }
 a:hover {
   @apply bg-yellow-100
+}
+:global(.dark) a:hover {
+  @apply bg-yellow-600
 }
 a {
   @apply p-1
