@@ -16,5 +16,8 @@
     "astro": "^1.0.0-beta.7",
     "prettier-plugin-astro": "^0.0.12",
     "svelte": "^3.46.4"
+  },
+  "dependencies": {
+    "astro-imagetools": "^0.5.1"
   }
 }

@@ -4,6 +4,8 @@ import svelte from "@astrojs/svelte";
 import tailwind from "@astrojs/tailwind";
 import turbolinks from "@astrojs/turbolinks";
 
+import astroImagePlugin from "astro-imagetools/plugin";
+
 // https://astro.build/config
 export default defineConfig({
   integrations: [
@@ -11,4 +13,5 @@ export default defineConfig({
     tailwind({ config: { applyAstroPreset: false } }),
     turbolinks(),
   ],
+  vite: { plugins: [astroImagePlugin] },
 });
