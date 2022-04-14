@@ -2,3 +2,8 @@
   --color-text: 17 24 39;
   --color-background: 255 255 255;
 }
+
+.dark {
+  --color-text: 255 255 255;
+  --color-background: 17 24 39;
+}
