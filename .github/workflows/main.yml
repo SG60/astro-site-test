@@ -6,9 +6,9 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -27,17 +27,23 @@ jobs:
         # ensure that git history is available (pull request checks don't work otherwise)
         with:
           ref: ${{ github.event.pull_request.head.sha }}
+
+      - uses: pnpm/action-setup@v2
+        with:
+          version: "7.0.0-rc.3"
       - uses: actions/setup-node@v3
         with:
-          node-version: '16'
-          cache: 'npm'
-      - name: npm install, build
+          node-version: "16"
+          cache: "pnpm"
+
+      - name: pnpm install, build
         run: |
-          npm install
-          npm run build
+          pnpm install
+          pnpm run build
+
       - name: run Lighthouse CI
         run: |
-          npm install -g @lhci/cli@0.8.x
+          pnpm install -g @lhci/cli@0.8.x
           lhci autorun
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
