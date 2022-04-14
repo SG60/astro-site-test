@@ -1,7 +1,6 @@
 import { defineConfig } from "astro/config";
 import svelte from "@astrojs/svelte";
 import tailwind from "@astrojs/tailwind";
-import turbolinks from "@astrojs/turbolinks";
 import astroImagePlugin from "astro-imagetools/plugin";
 
 import sitemap from "@astrojs/sitemap";
@@ -15,7 +14,6 @@ export default defineConfig({
         applyAstroPreset: false,
       },
     }),
-    turbolinks(),
     sitemap(),
   ],
   vite: {
