@@ -13,7 +13,7 @@ const { title, description } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script>
-      import { getColorPreference } from "../theme_help";
+      import { getColorPreference } from "@components/ThemeSwitchButton/themeSwitchTools";
       if (getColorPreference() === "dark") {
         document.documentElement.classList.add("dark");
       }
