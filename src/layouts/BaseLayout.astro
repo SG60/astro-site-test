@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import DefaultHeadElements from "@components/DefaultHeadElements.astro";
 import Header from "@components/Header.astro";
+import SwupNavigation from "@components/SwupNavigation.astro";
 
 const { title, description } = Astro.props;
 ---
@@ -10,16 +11,7 @@ const { title, description } = Astro.props;
   <head>
     <DefaultHeadElements {title} {description} />
     <slot name="head" />
-    <script hoist type="module">
-      import Swup from "swup";
-      import SwupHeadPlugin from "@swup/head-plugin";
-      import SwupPreloadPlugin from "@swup/preload-plugin";
-      const swup = new Swup({
-        animationSelector: '[class*="swup-transition-"]',
-        containers: ["#swup", "nav"],
-        plugins: [new SwupHeadPlugin(), new SwupPreloadPlugin()],
-      });
-    </script>
+    <SwupNavigation />
   </head>
   <body class="text-text bg-background">
     <Header />
