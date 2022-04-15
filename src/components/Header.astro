@@ -17,7 +17,8 @@ const currentPage = Astro.canonicalURL.pathname.slice(0,-1);
 <header
   class="mb-4 py-6 grid grid-cols-[minmax(1.2rem,_1fr)_minmax(auto,65ch)_minmax(1.2rem,1fr)] bg-slate-100 dark:bg-slate-600 text-text"
 >
-  <nav class="my-auto col-start-2 flex flex-row items-center">
+  <span class="my-auto col-start-2 flex flex-row items-center">
+  <nav class="flex-grow flex flex-row items-center">
     <div>
       <a href="/" aria-current={currentPage === "" ? "page":"false"}>Home</a>
     </div>
@@ -30,10 +31,11 @@ const currentPage = Astro.canonicalURL.pathname.slice(0,-1);
           </li>
         ))}
     </ul>
+  </nav>
     <div class="ml-3 flex">
       <ThemeSwitchButton/>
     </div>
-  </nav>
+  </span>
 </header>
 
 <style>
