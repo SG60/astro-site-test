@@ -12,9 +12,11 @@ const { title, description } = Astro.props;
     <slot name="head" />
     <script hoist type="module">
       import Swup from "swup";
+      import SwupHeadPlugin from "@swup/head-plugin";
       const swup = new Swup({
         animationSelector: '[class*="swup-transition-"]',
         containers: ["#swup", "nav"],
+        plugins: [new SwupHeadPlugin()],
       });
     </script>
   </head>
