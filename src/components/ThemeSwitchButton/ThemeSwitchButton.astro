@@ -64,7 +64,12 @@
 <style lang="scss">
   .theme-toggle {
     --size: 1.7rem;
-    --icon-fill: rgb(var(--color-text));
+    --icon-fill: rgb(143, 138, 138);
+    --icon-fill-hover: rgb(0, 0, 0);
+    :global(.dark) & {
+      --icon-fill: rgb(143, 138, 138);
+      --icon-fill-hover: rgb(255 255 255);
+    }
 
     border: none;
     padding: 0;
@@ -153,12 +158,12 @@
         }
       }
       & > .moon > circle {
-        transform: translateX(-7px);
+        transform: translateX(-40px);
         transition: transform 0.25s ease-in-out;
 
         @supports (cx: 1) {
           transform: translateX(0);
-          cx: 17;
+          cx: 30;
           transition: cx 0.25s ease-in-out;
         }
 
