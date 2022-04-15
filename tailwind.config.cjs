@@ -9,6 +9,7 @@ function withOpacityValue(variable) {
 
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,svelte,ts,tsx,vue}"],
+  darkMode: "class", // don't rely on OS preference
   theme: {
     extend: {
       typography: ({ theme }) => ({

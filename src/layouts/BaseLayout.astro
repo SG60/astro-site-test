@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import Header from "@components/Header.astro";
+
 const { title, description } = Astro.props;
 ---
 
@@ -11,6 +12,15 @@ const { title, description } = Astro.props;
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Script to set correct initial colour theme -->
+    <script is:inline>
+      const theme =
+        localStorage.getItem("theme-preference") ||
+        (window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light");
+      theme === "dark" ? document.documentElement.classList.add("dark") : null;
+    </script>
     <slot name="head" />
   </head>
   <body class="text-text bg-background">
