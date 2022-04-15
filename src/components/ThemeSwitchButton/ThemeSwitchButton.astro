@@ -41,7 +41,8 @@
     getColorPreference,
     setColorPreference,
   } from "./themeSwitchTools.ts";
-  console.log("initial color-preference", getColorPreference());
+
+  // Get the current theme from localStorage
   document.querySelector("#theme-toggle").addEventListener("click", () => {
     const colorPreference = getColorPreference();
     console.log("colorPreference", colorPreference);
@@ -51,6 +52,13 @@
       setColorPreference("dark");
     }
   });
+
+  // Stay synchronized with system theme
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", ({ matches: isDark }) => {
+      setColorPreference(isDark ? "dark" : "light");
+    });
 </script>
 
 <style lang="scss">
