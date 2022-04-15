@@ -10,10 +10,14 @@ const { title, description } = Astro.props;
   <head>
     <DefaultHeadElements {title} {description} />
     <slot name="head" />
+    <script hoist type="module">
+      import Swup from "swup";
+      const swup = new Swup();
+    </script>
   </head>
   <body class="text-text bg-background">
     <Header />
-    <main class="py-8 px-4 grid justify-center">
+    <main class="py-8 px-4 grid justify-center transition-colors" id="swup">
       <slot />
     </main>
   </body>

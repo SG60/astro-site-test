@@ -19,6 +19,7 @@
     "svelte": "^3.46.4"
   },
   "dependencies": {
-    "astro-imagetools": "^0.5.1"
+    "astro-imagetools": "^0.5.1",
+    "swup": "^2.0.14"
   }
 }
