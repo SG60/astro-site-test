@@ -14,6 +14,7 @@ const { title, description } = Astro.props;
       import Swup from "swup";
       const swup = new Swup({
         animationSelector: '[class*="swup-transition-"]',
+        containers: ["#swup", "nav"],
       });
     </script>
   </head>
