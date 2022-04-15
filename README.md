@@ -1,7 +1,17 @@
 # Deploy details
 On [CloudFlare](https://dash.cloudflare.com/) Pages currently: [astro-test](https://astro-test.samgreening.com/)
 
+# Tech used
+- swup.js for client side page transitions and preloading links.
+- TailwindCSS
+
+---
+
+<details>
+<summary>
+
 # Welcome to [Astro](https://astro.build)
+</summary>
 
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
@@ -42,3 +52,5 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://github.com/withastro/astro) or jump into our [Discord server](https://astro.build/chat).
+
+</details>

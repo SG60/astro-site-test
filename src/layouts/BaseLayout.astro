@@ -1,32 +1,32 @@
 ---
 import "../styles/global.css";
+import DefaultHeadElements from "@components/DefaultHeadElements.astro";
 import Header from "@components/Header.astro";
+import SwupNavigation from "@components/SwupNavigation.astro";
 
 const { title, description } = Astro.props;
 ---
 
 <html lang="en">
   <head>
-    <title>{title}</title>
-    <meta name="description" content={description} />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Script to set correct initial colour theme -->
-    <script is:inline>
-      const theme =
-        localStorage.getItem("theme-preference") ||
-        (window.matchMedia("(prefers-color-scheme: dark)").matches
-          ? "dark"
-          : "light");
-      theme === "dark" ? document.documentElement.classList.add("dark") : null;
-    </script>
+    <DefaultHeadElements {title} {description} />
     <slot name="head" />
+    <SwupNavigation />
   </head>
   <body class="text-text bg-background">
     <Header />
-    <main class="py-8 px-4 grid justify-center">
+    <main class="py-8 px-4 grid justify-center swup-transition-fade" id="swup">
       <slot />
     </main>
   </body>
 </html>
+
+<style>
+  .swup-transition-fade {
+    transition: 0.1s ease-in;
+    opacity: 1;
+  }
+  html.is-animating .swup-transition-fade {
+    opacity: 0;
+  }
+</style>

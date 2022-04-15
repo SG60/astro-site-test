@@ -1,0 +1,15 @@
+<script hoist type="module">
+  import Swup from "swup";
+  import SwupHeadPlugin from "@swup/head-plugin";
+  import SwupPreloadPlugin from "@swup/preload-plugin";
+  const swup = new Swup({
+    animationSelector: '[class*="swup-transition-"]',
+    containers: ["#swup", "nav"],
+    plugins: [
+      new SwupHeadPlugin({
+        persistTags: (tag) => tag.rel === "stylesheet",
+      }),
+      new SwupPreloadPlugin(),
+    ],
+  });
+</script>
