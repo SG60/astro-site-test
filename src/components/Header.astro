@@ -15,7 +15,7 @@ const links = [
 const currentPage = Astro.canonicalURL.pathname.slice(0,-1);
 ---
 <header
-  class="mb-4 py-2 grid grid-cols-[minmax(1.2rem,_1fr)_minmax(auto,65ch)_minmax(1.2rem,1fr)] bg-slate-100 dark:bg-slate-600 text-text"
+  class="mb-4 py-6 grid grid-cols-[minmax(1.2rem,_1fr)_minmax(auto,65ch)_minmax(1.2rem,1fr)] bg-slate-100 dark:bg-slate-600 text-text"
 >
   <nav class="my-auto col-start-2 flex flex-row items-center">
     <div>
@@ -41,12 +41,12 @@ a[aria-current="page"] {
   @apply border-b-2 border-slate-500
 }
 a:hover {
-  @apply bg-yellow-100
+  @apply bg-slate-500 text-white
 }
 :global(.dark) a:hover {
-  @apply bg-yellow-600
+  @apply bg-white text-slate-500
 }
 a {
-  @apply p-1
+  @apply p-1 transition-colors
 }
 </style>
