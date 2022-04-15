@@ -8,7 +8,10 @@
       ],
       "@layouts/*": [
         "src/layouts/*"
-      ]
+      ],
+      "@src/*": [
+        "src/*"
+      ],
     }
   }
 }
