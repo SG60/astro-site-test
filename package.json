@@ -21,7 +21,7 @@
   "dependencies": {
     "@swup/head-plugin": "^1.2.0",
     "@swup/preload-plugin": "^1.0.3",
-    "astro-imagetools": "^0.5.1",
+    "astro-imagetools": "^0.5.8",
     "swup": "^2.0.14"
   }
 }
