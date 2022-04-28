@@ -1,5 +1,12 @@
+<div align="center">
+
 # Deploy details
-On [CloudFlare](https://dash.cloudflare.com/) Pages currently: [astro-test](https://astro-test.samgreening.com/)
+Was on [CloudFlare](https://dash.cloudflare.com/) Pages: [astro-test](https://astro-test.samgreening.com/)
+
+__Currently archived__
+
+</div>
+
 
 # Tech used
 - swup.js for client side page transitions and preloading links.
